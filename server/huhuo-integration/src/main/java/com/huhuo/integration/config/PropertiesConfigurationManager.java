@@ -10,8 +10,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * 管理properties文件的类
- * 
- * @author shifengxuan
+ * @author wuyuxuan
  *
  */
 public class PropertiesConfigurationManager {

@@ -5,9 +5,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-import com.alibaba.fastjson.JSONObject;
+import com.huhuo.integration.cust.JsonEntity;
 
-public class Condition<T> {
+public class Condition<T> extends JsonEntity {
 
 	/**
 	 * 查询实体
@@ -29,8 +29,6 @@ public class Condition<T> {
 	 * 分组
 	 */
 	protected List<Group> groupList;
-	
-	private String dateFormat = "yyyy-MM-dd HH:mm:ss";
 	
 	public Condition() {
 		super();
@@ -100,10 +98,4 @@ public class Condition<T> {
 		}
 		setGroupList(list);
 	}
-
-	@Override
-	public String toString() {
-		return JSONObject.toJSONStringWithDateFormat(this, dateFormat);
-	}
-
 }

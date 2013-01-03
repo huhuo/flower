@@ -1,4 +1,4 @@
-package com.huhuo.integration.db.mysql;
+package com.huhuo.integration.cust;
 
 import com.alibaba.fastjson.JSONObject;
 import com.huhuo.integration.config.GlobalConstant.DateFormat;
