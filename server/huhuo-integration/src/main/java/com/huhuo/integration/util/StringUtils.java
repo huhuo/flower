@@ -36,7 +36,7 @@ import java.util.Vector;
 /**
  * Utility class to peform common String manipulation algorithms.
  */
-public class StringUtils {
+public class StringUtils extends org.springframework.util.StringUtils {
 
     /**
      * Initialization lock for the whole class. Init's only happen once per

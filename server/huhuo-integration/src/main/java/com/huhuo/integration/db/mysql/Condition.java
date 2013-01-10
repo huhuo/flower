@@ -6,7 +6,12 @@ import java.util.List;
 import java.util.Map;
 
 import com.huhuo.integration.cust.JsonEntity;
-
+/**
+ * search criteria entity, wrapped by model t, page, orderList, groupList, and option data opt
+ * @author wuyuxuan
+ *
+ * @param <T>
+ */
 public class Condition<T> extends JsonEntity {
 
 	/**
