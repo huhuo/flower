@@ -10,7 +10,7 @@ import com.huhuo.integration.exception.DaoException;
  *@author wuyuxuan
  * @param <T>
  */
-public interface IDBDao<T> {
+public interface IDBDao<T extends IModel<Long>> {
 
 	/**
 	 * persist T's instance of this interface by it's primary key id, if not exist in DB, then add a new record
@@ -63,7 +63,7 @@ public interface IDBDao<T> {
 	 * @return null if no available result was expected
 	 * @throws DaoException
 	 */
-	T queryForObject(String sql, Class<T> clazz, Object... args) throws DaoException;
+	T queryForObject(String sql, Class<? extends T> clazz, Object... args) throws DaoException;
 	/**
 	 * get model by id
 	 * @param clazz
