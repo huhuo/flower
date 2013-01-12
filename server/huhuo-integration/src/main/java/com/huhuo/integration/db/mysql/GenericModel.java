@@ -12,7 +12,7 @@ public abstract class GenericModel extends JsonEntity implements IModel<Long> {
 	protected Logger logger = LoggerFactory.getLogger(getClass());
 	
 	/**
-	 * primary key
+	 * primary key 测试哦
 	 */
 	protected Long id;
 	
