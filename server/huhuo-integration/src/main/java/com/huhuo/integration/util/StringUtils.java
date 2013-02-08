@@ -787,5 +787,41 @@ public class StringUtils extends org.springframework.util.StringUtils {
             return s;
         }
         return new String(ret.array());
-    }  
+    }
+    /**
+     * 拼接数组中的对象字符，使用指定字符拼接
+     * @param args 对象数组
+     * @param spliteCode 指定字符串 不能为空，否则抛出异常
+     * @return 拼接字符
+     */
+    public static String join(Object[] args,String spliteCode){
+    	
+    	StringBuilder sb=new StringBuilder();
+    	if(args!=null){
+    		if(spliteCode==null){
+    			for(Object arg:args){
+    				sb.append(arg);
+    			}
+    		}else{
+    			for(Object arg:args){
+    				sb.append(spliteCode);
+    				sb.append(arg);
+    				
+    			}
+    			sb.delete(0, spliteCode.length());
+    		}
+    	}
+    	
+    	
+    	
+    	return sb.toString();
+    }
+    /**
+     * 对象转为字符串
+     * @param obj
+     * @return
+     */
+    public static String object2String(Object obj){
+    	return obj==null?"null":obj.toString();
+    }
 }
